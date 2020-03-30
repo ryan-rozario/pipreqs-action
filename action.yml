@@ -13,6 +13,11 @@ inputs:
     required: true
     default: "requirement.txt"
 
+  REQUIREMENT_PATH:
+    description: "Folder where requirement.txt has to be saved in"
+    required: true
+    default: "requirement.txt"
+
 
 runs:
   using: "docker"
