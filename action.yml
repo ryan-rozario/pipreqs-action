@@ -1,5 +1,5 @@
-name: "pipreqs github action"
-description: "pipreqs allows you to generate the requirement.txt file based on the imports of the project. This action will allow you to automatically create the requirement.txt file when you pull or push"
+name: "Automatic requirement.txt Generator"
+description: "This action will automatically create the requirement.txt file for a python project using the pipreqs tool."
 author: "Ryan Rozario"
 
 inputs:
