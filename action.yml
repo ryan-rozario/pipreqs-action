@@ -1,4 +1,4 @@
-name: "Automatic requirement.txt Generator"
+name: "Automatic requirement.txt for Python Projects"
 description: "This action will automatically create the requirement.txt file for a python project using the pipreqs tool."
 author: "Ryan Rozario"
 
