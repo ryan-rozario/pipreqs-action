@@ -5,84 +5,37 @@
 
 [pipreqs](https://github.com/bndr/pipreqs) - Generates pip requirements.txt file based on imports of any project.
 
-This action will automatically create the requirement.txt file for a project.
+This action will automatically create the requirement.txt file for a python project using the pipreqs tool.
 
-This is a template for creating GitHub actions and contains a small Python application which will be built into a minimal [Container Action](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action). Our final container from this template is ~50MB, yours may be a little bigger once you add some code. If you want something smaller check out my [go-container-action template](https://github.com/jacobtomlinson/go-container-action/actions).
-
-In `main.py` you will find a small example of accessing Action inputs and returning Action outputs. For more information on communicating with the workflow see the [development tools for GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/development-tools-for-github-actions).
-
-> 🏁 To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+You can specify the location of your project folder that contains all the python files within your repository.
+You can specify the path to which your requirement.txt has to be saved.
 
 ## Usage
-
-Describe how to use your action here.
 
 ### Example workflow
 
 ```yaml
-name: My Workflow
-on: [push, pull_request]
+name: Integration Test
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Run action
+      - uses: actions/checkout@master
+      - name: Self test
+        id: selftest
 
-      # Put your action repo here
-      uses: me/myaction@master
+        uses: ryan-rozario/pipreqs-action-cpy@master
 
-      # Put an example of your mandatory inputs here
-      with:
-        myInput: world
+        # Put an example of mandatory inputs here
+        with:
+          PROJECT_PATH: project_folder   #default is the root of the repository
+          REQUIREMENT_PATH: project_folder/requirement.txt  #default is requirement.txt in the root of your repository 
 ```
 
 ### Inputs
 
-| Input                                             | Description                                        |
-|------------------------------------------------------|-----------------------------------------------|
-| `myInput`  | An example mandatory input    |
-| `anotherInput` _(optional)_  | An example optional input    |
-
-### Outputs
-
-| Output                                             | Description                                        |
-|------------------------------------------------------|-----------------------------------------------|
-| `myOutput`  | An example output (returns 'Hello world')    |
-
-## Examples
-
-> NOTE: People ❤️ cut and paste examples. Be generous with them!
-
-### Using the optional input
-
-This is how to use the optional input.
-
-```yaml
-with:
-  myInput: world
-  anotherInput: optional
-```
-
-### Using outputs
-
-Show people how to use your outputs in another action.
-
-```yaml
-steps:
-- uses: actions/checkout@master
-- name: Run action
-  id: myaction
-
-  # Put your action name here
-  uses: me/myaction@master
-
-  # Put an example of your mandatory arguments here
-  with:
-    myInput: world
-
-# Put an example of using your outputs here
-- name: Check outputs
-    run: |
-    echo "Outputs - ${{ steps.myaction.outputs.myOutput }}"
-```
+| Input                                             | Description                                        |Default                                        |
+|------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| `PROJECT_PATH`  | Gives the path to the project folder that contains the python files    |  .
+| `REQUIREMENT_PATH`  | Gives the path to the location where requirement.txt has to be saved, including the requirement.txt file name    | requirement.txt|
