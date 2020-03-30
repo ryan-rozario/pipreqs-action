@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-python3 /create-requirement.py > requirement
+python3 /create-requirement.py > "$REQUIREMENT_PATH"
 
 set -e
 sh -c "ls"
