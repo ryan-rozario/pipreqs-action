@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+
+echo "$REQUIREMENT_PATH"
 python3 /create-requirement.py > "$REQUIREMENT_PATH"
 
 set -e
