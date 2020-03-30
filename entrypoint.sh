@@ -2,7 +2,7 @@
 
 
 echo "$REQUIREMENT_PATH"
-#python3 /create-requirement.py > "$REQUIREMENT_PATH"
+python3 /create-requirement.py
 
 #set -e
 #sh -c "ls"
