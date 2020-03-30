@@ -1,4 +1,4 @@
-# Pipreqs Github Action
+# Automatic requirement.txt for Python Projects on Github
 
 [![Actions Status](https://github.com/ryan-rozario/pipreqs-action/workflows/Lint/badge.svg)](https://github.com/ryan-rozario/pipreqs-action/actions)
 [![Actions Status](https://github.com/ryan-rozario/pipreqs-action/workflows/Integration%20Test/badge.svg)](https://github.com/ryan-rozario/pipreqs-action/actions)
