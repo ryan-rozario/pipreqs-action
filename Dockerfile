@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine/git:1.0.7
 
 COPY LICENSE README.md entrypoint.sh /
 
