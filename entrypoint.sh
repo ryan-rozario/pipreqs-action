@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-python3 /create-requirement.py > "$INPUT_REQUIREMENT_PATH"
+pipreqs --force $INPUT_REQUIREMENT_PATH
 
 set -e
 sh -c "ls"
