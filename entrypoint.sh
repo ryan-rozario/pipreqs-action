@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-pipreqs --force $INPUT_REQUIREMENT_PATH
+pipreqs --force $INPUT_PROJECT_PATH
 
 set -e
 sh -c "ls"
