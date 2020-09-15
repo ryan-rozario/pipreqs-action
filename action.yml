@@ -12,6 +12,10 @@ inputs:
     description: "Folder where requirement.txt has to be saved in"
     required: true
     default: "requirement.txt"
+  PROJECT_NAME:
+    description: "Name of the project to include in the commit"
+    required: true
+    default: ""
 
 
 runs:
