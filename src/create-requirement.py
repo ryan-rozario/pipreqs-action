@@ -1,3 +1,8 @@
+"""
+This is a script that was originally used to generate pipreqs but it is now done from the bash script.
+This file is no longer needed
+"""
+
 import os
 from pipreqs import pipreqs
 
