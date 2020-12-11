@@ -1,5 +1,5 @@
-name: "Automatic requirement.txt for Python Projects"
-description: "This action will automatically create the requirement.txt file for a python project using the pipreqs tool."
+name: "Automatic requirements.txt for Python Projects"
+description: "This action will automatically create the requirements.txt file for a python project using the pipreqs tool."
 author: "Ryan Rozario"
 
 inputs:
@@ -9,9 +9,9 @@ inputs:
     default: "."
 
   REQUIREMENT_PATH:
-    description: "Folder where requirement.txt has to be saved in"
+    description: "Folder where requirements.txt has to be saved in"
     required: true
-    default: "requirement.txt"
+    default: "requirements.txt"
   PROJECT_NAME:
     description: "Name of the project to include in the commit"
     required: true
