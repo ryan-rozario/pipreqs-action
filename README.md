@@ -1,8 +1,5 @@
 # Automatic requirement.txt for Python Projects on Github
 
-[![Actions Status](https://github.com/ryan-rozario/pipreqs-action/workflows/Lint/badge.svg)](https://github.com/ryan-rozario/pipreqs-action/actions)
-[![Actions Status](https://github.com/ryan-rozario/pipreqs-action/workflows/Integration%20Test/badge.svg)](https://github.com/ryan-rozario/pipreqs-action/actions)
-
 [pipreqs](https://github.com/bndr/pipreqs) - Generates pip requirements.txt file based on imports of any project.
 
 This action will automatically create the requirements.txt file for a python project using the pipreqs tool.
