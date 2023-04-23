@@ -1,8 +1,9 @@
-FROM alpine/git:1.0.7
+FROM alpine:latest
 
 COPY LICENSE README.md entrypoint.sh /
 
-RUN apk add python3
+RUN apk add --no-cache git
+RUN apk add --no-cache python3
 RUN pip3 install pipreqs
 
 RUN chmod +x /entrypoint.sh
