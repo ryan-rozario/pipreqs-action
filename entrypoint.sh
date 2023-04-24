@@ -8,6 +8,13 @@ sh -c "ls"
 git config --global --add safe.directory /github/workspace
 git config --global user.name "$GITHUB_ACTOR"
 git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+git diff --exit-code --stat | true
+if [ ${PIPESTATUS[0]} -eq 0 ]
+then
+    exit 0
+fi
+
 git add -A
 git commit -m "Updated $INPUT_PROJECT_NAME requirements file"
 git push -u origin HEAD
