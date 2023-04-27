@@ -9,7 +9,7 @@ git config --global --add safe.directory /github/workspace
 git config --global user.name "$GITHUB_ACTOR"
 git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-if (git diff --exit-code --stat); then exit 0; fi
+if !(git diff --exit-code --stat); then exit 0; fi
 
 git add -A
 git commit -m "Updated $INPUT_PROJECT_NAME requirements file"
